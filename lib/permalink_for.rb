@@ -1,5 +1,5 @@
-require 'permalink_for/pretty_implementation'
-require 'permalink_for/slug_implementation'
+require 'permalink_for/pretty_impl'
+require 'permalink_for/slug_impl'
 require 'permalink_for/version'
 
 module PermalinkFor
