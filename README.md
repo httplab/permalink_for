@@ -1,6 +1,6 @@
 # PermalinkFor
 
-Simple alternative to FriendlyId.
+Crazy simple alternative to FriendlyId.
 
 ## Installation
 

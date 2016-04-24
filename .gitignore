@@ -11,3 +11,5 @@
 *.sublime-project
 *.sublime-workspace
 *.dump
+
+.DS_Store

@@ -6,8 +6,8 @@ require 'permalink_for/version'
 Gem::Specification.new do |spec|
   spec.name          = 'permalink_for'
   spec.version       = PermalinkFor::VERSION
-  spec.authors       = ['sk']
-  spec.email         = ['sk@httplab.ru']
+  spec.authors       = ['rainrb', 'kovalevsky']
+  spec.email         = ['dev@httplab.ru']
 
   spec.summary       = 'Slugs for ActiveRecord Models'
   spec.description   = 'Simple alternative to FriendlyId.'
