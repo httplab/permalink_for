@@ -1,3 +1,5 @@
+require 'active_support/concern'
+
 require 'permalink_for/pretty_impl'
 require 'permalink_for/slug_impl'
 require 'permalink_for/version'
