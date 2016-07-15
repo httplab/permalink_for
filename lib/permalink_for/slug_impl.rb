@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module PermalinkFor::SlugImpl
   extend ActiveSupport::Concern
 
@@ -41,7 +42,7 @@ module PermalinkFor::SlugImpl
       end
     end
 
-    fail 'Failed to generate permalink' if generated_permalink.nil?
+    raise 'Failed to generate permalink' if generated_permalink.nil?
     self.permalink = generated_permalink
   end
 
