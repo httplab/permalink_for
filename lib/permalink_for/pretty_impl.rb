@@ -6,16 +6,16 @@ module PermalinkFor::PrettyImpl
     return id if new_record?
     target_field_value = send(permalink_configuration[:target_field])
     arr = [id, I18n.transliterate(target_field_value).parameterize]
-    arr.delete('')
-    arr = arr.reverse if self.class.permalink_configuration[:reverse]
-    arr.join('-')
+    arr.reject!(&:blank?)
+    permalink_configuration[:reverse] && arr.reverse!
+    arr.join(PermalinkFor::DELIMETER)
   end
 
   module ClassMethods
     def find(id)
       position = permalink_configuration[:reverse] ? :last : :first
-      id = id.split('-').send(position).to_i if id.is_a? String
-      super id
+      id = id.split(PermalinkFor::DELIMETER).send(position).to_i if id.is_a?(String)
+      super(id)
     end
   end
 end
